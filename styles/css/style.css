@@ -179,12 +179,14 @@ main .loader::before {
   }
 }
 main .doctor-profile {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  column-gap: 5rem;
+  column-gap: 4rem;
+  row-gap: 2rem;
 }
 main .person-doctor-profile {
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,17 +247,33 @@ button {
     width: 65px !important;
   }
   .container-banner .card-container-banner {
-    width: 470px !important;
+    width: 75% !important;
     left: 30px !important;
   }
   .container-banner .card-container-banner img {
-    width: 350px;
+    width: 90%;
   }
   .container-banner .card-container-banner .text-card-container-banner p {
     font-size: 14px !important;
   }
   .container-banner .card-container-banner button {
     padding: 0.4rem 0.6rem !important;
+  }
+}
+@media (max-width: 495px) {
+  header .list-bar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  header .search-bar {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
